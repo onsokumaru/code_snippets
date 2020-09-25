@@ -1,0 +1,49 @@
+# snippets file for c programming snippets
+
+snippet head 
+/*
+ *  Name: ${1:onsokumaru}
+ *  Email: ${2:11082686+onsokumaru@users.noreply.github.com}
+ *  Date: `date +%Y-%m-%d`
+ *  File: `!v @%`
+ *  
+ */
+$0
+endsnippet
+
+# todo reminder
+snippet todo
+/*  TODO: ${1:desc} -- `!v strftime("%c")` */
+$0
+endsnippet
+
+## main functions
+snippet main
+int main(int argc, char *argv[])
+{
+    ${0}
+    return 0;
+}
+endsnippet
+
+snippet mainv
+int main(void)
+{
+    ${0}
+    return 0;
+}
+endsnippet
+
+## preprocessor
+
+#include <..>
+snippet inc
+#include <${1:stdio}.h>
+$0
+endsnippet
+
+#include "..."
+snippet Inc
+#include "${1:`!v expand('%:r')`}.h"
+$0
+endsnippet

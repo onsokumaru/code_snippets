@@ -1,0 +1,61 @@
+## snippets for bash scripting
+
+# shebang
+snippet #!
+#!/bin/bash
+$0
+endsnippet
+
+# file header
+snippet title 
+###############################################################################
+#
+#  Name: ${1:onsokumkaru}
+#  Email: ${2:11082686+onsokumaru@users.noreply.github.com}
+#  Date: `date +%Y-%m-%d`
+#  File: `!v @%`
+#
+#  ${3:Comments}
+#
+###############################################################################
+$0
+endsnippet
+
+# comment
+snippet com
+# ${1:description}
+$0
+endsnippet
+
+# TODO
+snippet todo
+# TODO: ${1:description} -- `!v strftime("%c")`
+$0
+endsnippet
+
+# usage message
+snippet use
+usage () {
+	
+    cat << EOF
+
+Usage: $(basename \$0) ${1:pararms}
+    
+    ${2}
+
+EOF
+    exit 1
+}
+$0
+endsnippet
+
+## Conditionals
+
+# if
+snippet if
+if [ ${1:test} ]; then
+
+    $0
+
+fi
+endsnippet
