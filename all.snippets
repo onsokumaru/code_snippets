@@ -1,0 +1,18 @@
+snippet newssh
+Host $1
+    Hostname $2
+    User ${3:mike}
+    Port $4
+    IdentityFile ${5:/home/mike/.ssh/id_rsa}
+
+$0
+endsnippet
+
+snippet txt
+cat << EOF
+${1}
+EOF
+$0
+endsnippet
+
+
