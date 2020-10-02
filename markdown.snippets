@@ -1,4 +1,6 @@
-# snippets for markdown files
+### snippets for markdown files ###
+
+## headers 
 
 snippet h1
 # ${1:header}
@@ -30,3 +32,59 @@ snippet h6
 $0
 endsnippet
 
+## emphasis
+
+# italics
+snippet itl
+_${1}_$0
+endsnippet
+
+#bold
+snippet bo
+**${1}**$0
+endsnippet
+
+## lists
+
+# unordered list
+snippet ul
+* ${1:Item 1}
+* ${2:Item 2}$0
+endsnippet
+
+# ordered list
+snippet ol
+1. ${1:Item 1}
+1. ${2:Item 2}$0
+endsnippet
+
+## Images
+
+# Format: ![Alt Text](url)
+snippet pic
+![${1:Alt Text}](${2:url})$0
+endsnippet
+
+## Links 
+
+# http//:github.com -- these are automatic
+
+#Format: [Display Text](url)
+snippet url
+[${1:Display Text}](http://${2:url})$0
+endsnippet
+
+## Blockqoutes
+
+snippet qo
+> ${1:quote}
+$0
+endsnippet
+
+## Inline code
+
+snippet ic
+\`${1:code}\`$0
+endsnippet
+
+### GitHub Flavor Markdown ###
