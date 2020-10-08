@@ -1,9 +1,45 @@
-snippet hgd
-#ifndef $1
+### Snippet file for C header files
+
+## file header
+
+snippet head 
+/*
+ *  Name: ${1:onsokumaru}
+ *  Email: ${2:11082686+onsokumaru@users.noreply.github.com}
+ *  Date: `date +%Y-%m-%d`
+ *  File: `!v @%`
+ *  
+ */
+$0
+endsnippet
+
+## include guard
+
+snippet once
+#ifndef ${1:`!p snip.rv = fn.rsplit('.', 1)[0].upper() + '_H'`} 
 #define $1
 
 $0
 
 #endif /* end of include guard for $1 */
+endsnippet
+
+## preprocessor
+
+#include <..>
+snippet inc
+#include <${1:stdio}.h>
+$0
+endsnippet
+
+#include "..."
+snippet Inc
+#include "${1:`!v expand('%:r')`}.h"
+$0
+endsnippet
+
+# inline  comment
+snippet com
+/* ${1} */$0
 endsnippet
 
