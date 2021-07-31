@@ -1,13 +1,13 @@
 ## snippets for bash scripting
 
 # shebang
-snippet #!
-#!/bin/bash
+snippet #! "#!/usr/bin/env (!env)" b
+#!/usr/bin/env ${1:bash}
 $0
 endsnippet
 
 # file header
-snippet title 
+snippet top "file header" b 
 #==============================================================================
 #
 #  Name: ${1:onsokumkaru}
@@ -15,20 +15,34 @@ snippet title
 #  Date: `date +%Y-%m-%d`
 #  File: `!v @%`
 #
-#  ${3:Comments}
+#  Description: ${3:Comments}
 #
 #==============================================================================
 $0
 endsnippet
 
+# section header
+snippet head "section header" b
+#==============================================================================
+# ${1:Heading}
+#==============================================================================
+$0
+endsnippet
+
+# break 
+snippet ln "line break" b
+#------------------------------------------------------------------------------
+$0
+endsnippet
+
 # comment
-snippet com
+snippet com "comment" bi
 # ${1:description}
 $0
 endsnippet
 
 # TODO
-snippet todo
+snippet todo "TODO" b
 # TODO: ${1:description} -- `!v strftime("%c")`
 $0
 endsnippet
@@ -52,10 +66,14 @@ endsnippet
 ## Conditionals
 
 # if
-snippet if
-if [ ${1:test} ]; then
-
+snippet if "if statement" b
+if ${1:test} ; then
 	$0
-
 fi
+endsnippet
+
+# if test
+snippet ift "if test" b
+if [[ ${2:test} ${1:condition} ]]; then
+	$0
 endsnippet
