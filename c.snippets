@@ -56,7 +56,7 @@ int main(void)
 }
 endsnippet
 
-## include headers
+## preprocessor directives
 
 #include <..>
 snippet inc
@@ -70,5 +70,26 @@ snippet Inc
 $0
 endsnippet
 
-# preprocessor directives
+# define
+snippet def "#define" b
+#define ${1:macro}
+$0
+endsnippet
 
+# undefine
+snippet undef "#undef" b
+#undef ${1:macro}
+$0
+endsnippet
+
+# ifdef
+snippet ifdef "#ifdef" b
+#ifdef ${1:macro}
+$0
+endsnippet
+
+# ifndef
+snippet ifndef "#ifndef" b
+#ifndef ${1:macro}
+$0
+endsnippet
