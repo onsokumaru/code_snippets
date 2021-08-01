@@ -2,13 +2,28 @@
 
 ## file header
 
-snippet head 
+snippet head "file header" b
 /*
  *  Name: ${1:onsokumaru}
  *  Email: ${2:11082686+onsokumaru@users.noreply.github.com}
  *  Date: `date +%Y-%m-%d`
  *  File: `!v @%`
+ *  License: ISC
  *  
+ *  Copyright ${3:2021} ${4:Mike Furtado}
+ *
+ *  Permission to use, copy, modify, and/or distribute this software for any
+ *  purpose with or without fee is hereby granted, provided that the above 
+ *  copyright notice and this permission notice appear in all copies.
+ *   
+ *  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES 
+ *  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF 
+ *  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR 
+ *  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES 
+ *  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN 
+ *  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+ *  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ *
  */
 $0
 endsnippet
@@ -28,20 +43,20 @@ endsnippet
 snippet main
 int main(int argc, char *argv[])
 {
-    ${0}
-    return 0;
+	${0}
+	return 0;
 }
 endsnippet
 
 snippet mainv
 int main(void)
 {
-    ${0}
-    return 0;
+	${0}
+	return 0;
 }
 endsnippet
 
-## preprocessor
+## include headers
 
 #include <..>
 snippet inc
@@ -54,3 +69,6 @@ snippet Inc
 #include "${1:`!v expand('%:r')`}.h"
 $0
 endsnippet
+
+# preprocessor directives
+
