@@ -106,7 +106,15 @@ endsnippet
 
 # while loop
 snippet while "basic while" b
-while [[ ${1:condition} ]]; do
+while [[ ${1:test} ]]; do
 	$0
 done
 endsnippet
+
+# until loop
+snippet until "basic until loop" b
+until [[ ${1:test} ]]; do
+	$0
+done
+endsnippet
+
