@@ -63,7 +63,9 @@ EOF
 $0
 endsnippet
 
-## Conditionals
+#==============================================================================
+# Conditionals
+#==============================================================================
 
 # if
 snippet if "if statement" b
@@ -91,4 +93,20 @@ else
 	$0
 endsnippet
 
+#==============================================================================
+# Loops
+#==============================================================================
 
+# for loop
+snippet for "basic for loop" b
+for ${1:object} in ${2:objects}; do
+	$0
+done
+endsnippet
+
+# while loop
+snippet while "basic while" b
+while [[ ${1:condition} ]]; do
+	$0
+done
+endsnippet
