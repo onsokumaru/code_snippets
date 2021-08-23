@@ -1,2 +1,28 @@
 ## code snippets for python 3
 
+# set env
+snippet #! "set path to env" b
+#!/usr/bin/env python3
+$0
+endsnippet
+
+# import module
+snippet imp "import module" b
+import ${1:module}
+$0
+endsnippet
+
+# import fuction from module
+snippet from "import func from module" b
+from ${1:module} import ${2:function}
+$0
+endsnippet
+
+# alias module
+snippet as "alias a module" b
+import ${1:module} as ${2:alias}
+$0
+endsnippet
+
+
+
